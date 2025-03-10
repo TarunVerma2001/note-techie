@@ -151,12 +151,12 @@ const NoteEditor: React.FC = () => {
             className=' text-secondary cursor-pointer' >
             {isPreview ? 'Edit' : 'Preview'}
           </Button>
-          <Button
+          {/* <Button
             onClick={downloadPDF} // Add the download PDF button
             variant={"default"}
             className=' text-secondary  cursor-pointer'>
             Download PDF
-          </Button>
+          </Button> */}
         </div>
       </div>
 
