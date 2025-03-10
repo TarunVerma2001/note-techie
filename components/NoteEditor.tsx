@@ -125,9 +125,9 @@ const NoteEditor: React.FC = () => {
           value={title}
           onChange={handleTitleChange}
           placeholder="Note title"
-          className="bg-transparent text-secondary text-xl font-semibold  focus:outline-none  w-full"
+          className="bg-transparent text-white text-xl font-semibold  focus:outline-none  w-full"
         />
-        <div className="flex space-x-2">
+        <div className="flex items-center space-x-2">
           <MermaidTemplateMenu onSelectTemplate={addMermaidTemplate} />
           {hasMermaidDiagrams(content) && (
             <span
@@ -148,13 +148,13 @@ const NoteEditor: React.FC = () => {
           <Button
             onClick={() => setIsPreview(!isPreview)}
             variant={"default"}
-            className='bg-foreground text-secondary hover:bg-foreground/50 cursor-pointer' >
+            className=' text-secondary cursor-pointer' >
             {isPreview ? 'Edit' : 'Preview'}
           </Button>
           <Button
             onClick={downloadPDF} // Add the download PDF button
             variant={"default"}
-            className='bg-foreground text-secondary hover:bg-foreground/50 cursor-pointer'>
+            className=' text-secondary  cursor-pointer'>
             Download PDF
           </Button>
         </div>
@@ -163,7 +163,7 @@ const NoteEditor: React.FC = () => {
       {/* Editor or preview */}
       <div className="flex-1 overflow-y-auto">
         {isPreview ? (
-          <div id="pdf-content" className="p-6 bg-foreground text-secondary markdown-preview overflow-y-auto">
+          <div id="pdf-content" className="p-6  text-white markdown-preview overflow-y-auto">
             <ReactMarkdown
               remarkPlugins={[remarkGfm]}
               components={{

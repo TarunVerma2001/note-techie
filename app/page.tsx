@@ -20,7 +20,7 @@ export default function Home() {
 
 
   return (
-    <main className="flex flex-col  h-screen overflow-hidden divide-y divide-dark-surface-light">
+    <main className="flex flex-col     h-screen overflow-hidden divide-y divide-dark-surface-light">
 
       {/* Notes sidebar */}
       <div className="flex z-50 divide-x divide-dark-surface-light">

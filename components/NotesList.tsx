@@ -24,11 +24,11 @@ const NotesList: React.FC = () => {
     <div className="h-screen flex flex-col divide-y divide-dark-surface-light  overflow-hidden">
       {/* Header */}
       <div className="p-4 flex justify-between items-center">
-        <h1 className="text-xl text-secondary font-semibold">Note Techie</h1>
+        <h1 className="text-xl text-white font-semibold">Note Techie</h1>
         <Button
           onClick={addNote}
           aria-label="Add new note"
-          className='bg-foreground text-secondary hover:bg-foreground/50 cursor-pointer'
+          className=' text-secondary  bg-primary hover:bg-foreground/50 cursor-pointer'
         >
           <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
             <path fillRule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" clipRule="evenodd" />
@@ -42,7 +42,7 @@ const NotesList: React.FC = () => {
           <div className="p-4 text-cente flex flex-col gap-4 text-gray-400">
             <p>No notes yet</p>
             <Button
-              className='bg-foreground text-secondary hover:bg-foreground/50 cursor-pointer'
+              className=' text-secondary  cursor-pointer'
               onClick={addNote}
             >
               Create your first note
@@ -54,12 +54,12 @@ const NotesList: React.FC = () => {
               <div
                 key={note.id}
                 onClick={() => setActiveNote(note.id)}
-                className={`cursor-pointer transition hover:bg-foreground border-b border-dark-surface-light ${activeNoteId === note.id ? 'bg-foreground' : ''}`}
+                className={`cursor-pointer transition hover:bg-dark-surface border-b border-dark-surface-light ${activeNoteId === note.id ? 'bg-dark-surface' : ''}`}
                 style={{ cursor: 'pointer' }}
               >
                 <div className="p-4">
                   <div className="flex justify-between items-start">
-                    <h3 className="font-medium mb-1 text-secondary truncate pr-2">{note.title}</h3>
+                    <h3 className="font-medium mb-1 text-white truncate pr-2">{note.title}</h3>
                     <button
                       onClick={(e) => {
                         e.stopPropagation();
@@ -84,7 +84,7 @@ const NotesList: React.FC = () => {
           </div>
         )}
       </div>
-    </div>
+    </div >
   );
 };
 
